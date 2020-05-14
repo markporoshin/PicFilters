@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="ClassworkOpenGL" targetName="ClassworkOpenGL" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f1f266d-4b51-4a5f-9d7d-3df978215131" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1aGPEXKmE8RTdfN0Vc5wIsSXrvJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ClassworkOpenGL" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ClassworkOpenGL" TARGET_NAME="ClassworkOpenGL" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ClassworkOpenGL" RUN_TARGET_NAME="ClassworkOpenGL">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f1f266d-4b51-4a5f-9d7d-3df978215131" name="Default Changelist" comment="" />
+      <created>1586358846196</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586358846196</updated>
+      <workItem from="1586358850961" duration="2484000" />
+      <workItem from="1587049656096" duration="2571000" />
+      <workItem from="1587196154872" duration="42000" />
+      <workItem from="1587568286281" duration="3768000" />
+      <workItem from="1587888336835" duration="1608000" />
+      <workItem from="1588060759006" duration="663000" />
+      <workItem from="1588777736605" duration="4224000" />
+      <workItem from="1589296586304" duration="2198000" />
+      <workItem from="1589483710710" duration="2264000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="179" key="GridCell.Tab.0.bottom" timestamp="1589487264879">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="179" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1589487264879" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1587117787403" />
+    <state width="1398" height="179" key="GridCell.Tab.0.center" timestamp="1589487264878">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="179" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1589487264878" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1587117787401" />
+    <state width="1398" height="179" key="GridCell.Tab.0.left" timestamp="1589487264878">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="179" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1589487264878" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1587117787400" />
+    <state width="1398" height="179" key="GridCell.Tab.0.right" timestamp="1589487264879">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="179" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1589487264879" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1587117787402" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1589486630991">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1589486630991" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.23.1440.827@0.23.1440.827" timestamp="1587117787355" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1589486630990">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1589486630990" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.23.1440.827@0.23.1440.827" timestamp="1587117787353" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1589486630990">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1589486630990" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.23.1440.827@0.23.1440.827" timestamp="1587117787352" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1589486630991">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1589486630991" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.23.1440.827@0.23.1440.827" timestamp="1587117787354" />
+    <state x="374" y="285" key="com.intellij.ide.util.TipDialog" timestamp="1589484223050">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="374" y="285" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1589484223050" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1586358987617">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586358987617" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="sizeof(short)" language="ObjectiveC" />
+        <watch expression="m" language="ObjectiveC" />
+        <watch expression="array[array_cursor]" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

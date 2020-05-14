@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/markporosin/CLionProjects/ClassworkOpenGL/NLFIL.c
+NLFIL.h
+/Users/markporosin/CLionProjects/ClassworkOpenGL/NLFIL.h
+stdlib.h
+-
+stdio.h
+-
+math.h
+-
+
+/Users/markporosin/CLionProjects/ClassworkOpenGL/NLFIL.h
+pic.h
+/Users/markporosin/CLionProjects/ClassworkOpenGL/pic.h
+
+/Users/markporosin/CLionProjects/ClassworkOpenGL/pic.h
+
