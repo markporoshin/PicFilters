@@ -160,3 +160,76 @@ void PicFilterMed( PIC *PDest, PIC *PSrc, int N )
 
     free(array);
 }
+
+
+int Mean(int * array, int size) {
+    int i, sum = 0;
+    for (i = 0; i < size; ++i) {
+        sum += array[i];
+    }
+    return sum / size;
+}
+
+int Var(int * array, int size, int mean) {
+    int i, sum = 0;
+    for (i = 0; i < size; ++i) {
+        sum += (array[i] - mean) * (array[i] - mean);
+    }
+    return sum / (size - 1);
+}
+
+void setArray(PIC * p, int * array, int r, int x, int y, int c)
+{
+    int size = r * r;
+    int k = 0, i, j;
+    for (i = x; i < x + r; ++i) {
+        for (j = y; j < y + r; ++j) {
+            int px = getPoint(p->W, i);
+            int py = getPoint(p->H, j);
+            array[k] = p->Pixels[px + py * p->W][c];
+            k++;
+        }
+    }
+}
+
+void PicFilterKuwahara( PIC *PDest, PIC *PSrc, int R ) {
+    int i, j, c, x, y;
+    int mean[4], var[4];
+    int x_offset, y_offset;
+    for (c = 0; c < 3; c++)
+    {
+        for (i = 0; i < PSrc->H; i++)
+        {
+            for (j = 0; j < PSrc->W; j++)
+            {
+                int * array = malloc(sizeof(int) * R * R);
+
+                setArray(PSrc, array, R, j - R, i - R, c);
+                mean[0] = Mean(array, R * R);
+                var[0] = Var(array, R * R, mean[0]);
+
+                setArray(PSrc, array, R, j - R, i - 1, c);
+                mean[1] = Mean(array, R * R);
+                var[1] = Var(array, R * R, mean[1]);
+
+                setArray(PSrc, array, R, j + 1, i - R, c);
+                mean[2] = Mean(array, R * R);
+                var[2] = Var(array, R * R, mean[2]);
+
+                setArray(PSrc, array, R, j + 1, i + 1, c);
+                mean[3] = Mean(array, R * R);
+                var[3] = Var(array, R * R, mean[3]);
+
+                int min = 0;
+                for (int k = 0; k < 4; ++k) {
+                    if (var[k] < var[min]) {
+                        min = k;
+                    }
+                }
+
+                PDest->Pixels[j + i * PDest->W][c] = mean[min];
+                free(array);
+            }
+        }
+    }
+}

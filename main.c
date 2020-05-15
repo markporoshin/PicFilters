@@ -14,8 +14,8 @@ static unsigned char Frame[FRAME_H][FRAME_W][3];
 
 extern FILTER Filters[];
 extern const int NumOfFilters;
-
-PIC m, *pics, robertson, sobel, med;
+PIC pic_negative;
+PIC m, *pics, robertson, sobel, med, kuwahara;
 
 void PutPixel( int x, int y, unsigned char B, unsigned char G, unsigned char R)
 {
@@ -64,7 +64,7 @@ void AutoDraw( PIC *P )
 }
 
 void reshape(int h, int w) {
-
+    glutPostRedisplay();
 }
 
 void Display() {
@@ -76,9 +76,11 @@ void Display() {
     glClearColor(0.7, 1, 0.5, 0);
 
     AutoDraw(&m);
-    AutoDraw(&robertson);
-    AutoDraw(&sobel);
-    AutoDraw(&med);
+    //AutoDraw(&pic_negative);
+    AutoDraw(&kuwahara);
+//    AutoDraw(&robertson);
+//    AutoDraw(&sobel);
+//    AutoDraw(&med);
 
     glDrawPixels(FRAME_W, FRAME_H, GL_RGB, GL_UNSIGNED_BYTE,  Frame);
 
@@ -103,21 +105,31 @@ int main ( int argc, char ** argv)
     pics = malloc(sizeof(PIC) * NumOfFilters);
 
 
-    PicLoad(&m, "/Users/markporosin/CLionProjects/ClassworkOpenGL/M.G24");
+    PicLoad(&m, "/Users/markporosin/CLionProjects/ClassworkOpenGL/m.G24");
 
-    for (int i = 0; i < NumOfFilters; ++i) {
-        PicCreate(pics+i, m.W, m.H);
-        PicFilter(pics+i, &m, Filters+i);
-    }
+//    for (int i = 0; i < NumOfFilters; ++i) {
+//        PicCreate(pics+i, m.W, m.H);
+//        PicFilter(pics+i, &m, Filters+i);
+//    }
+//
+//    PicCreate(&robertson, m.W, m.H);
+//    PicFilterRoberts(&robertson, &m, 3);
+//
+//    PicCreate(&sobel, m.W, m.H);
+//    PicFilterSobel(&sobel, &m, 1);
+//
+//    PicCreate(&med, m.W, m.H);
+//    PicFilterMed(&med, &m, 4);
 
-    PicCreate(&robertson, m.W, m.H);
-    PicFilterRoberts(&robertson, &m, 3);
+    PicCreate(&kuwahara, m.W, m.H);
+    PicFilterKuwahara(&kuwahara, &m, 20);
 
-    PicCreate(&sobel, m.W, m.H);
-    PicFilterSobel(&sobel, &m, 1);
+    byte negative[256];
+    LUTSetNegative(negative);
+    PicCreate(&pic_negative, m.W, m.H);
+    LUTApply(&pic_negative, &m, negative);
 
-    PicCreate(&med, m.W, m.H);
-    PicFilterMed(&med, &m, 4);
+    PicSave(&pic_negative, "/Users/markporosin/CLionProjects/ClassworkOpenGL/NegativeMonkey.G24");
 
     glutMainLoop();
 
