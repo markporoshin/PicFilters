@@ -59,19 +59,19 @@ void PicFilterSobel(PIC *PDest, PIC *PSrc, double Alpha )
         {
             for (j = 0; j < PSrc->W ; ++j)
             {
-                int bj = getPoint(PSrc->W, j + 1);
-                int ci = getPoint(PSrc->H, i + 1);
-                int aj = getPoint(PSrc->W, j - 1);
-                int di = getPoint(PSrc->H, i - 1);
+                int next_x = getPoint(PSrc->W, j + 1);
+                int next_y = getPoint(PSrc->H, i + 1);
+                int prev_x = getPoint(PSrc->W, j - 1);
+                int prev_y = getPoint(PSrc->H, i - 1);
 
-                int A = PSrc->Pixels[(di) * PDest->W + aj][c];
-                int B = PSrc->Pixels[i * PDest->W + aj][c];
-                int C = PSrc->Pixels[(ci) * PDest->W + (aj)][c];
-                int E = PSrc->Pixels[i * PDest->W + bj][c];
-                int H = PSrc->Pixels[(ci) * PDest->W + j][c];
-                int G = PSrc->Pixels[(ci) * PDest->W + (bj)][c];
-                int D = PSrc->Pixels[(di) * PDest->W + j][c];
-                int F = PSrc->Pixels[(di) * PDest->W + bj][c];
+                int A = PSrc->Pixels[(prev_y) * PDest->W + prev_x][c];
+                int B = PSrc->Pixels[(prev_y) * PDest->W + j     ][c];
+                int C = PSrc->Pixels[(prev_y) * PDest->W + next_x][c];
+                int D = PSrc->Pixels[i * PDest->W        + prev_x][c];
+                int E = PSrc->Pixels[i * PDest->W        + next_x][c];
+                int F = PSrc->Pixels[next_y * PDest->W   + prev_x][c];
+                int G = PSrc->Pixels[(next_y) * PDest->W + j     ][c];
+                int H = PSrc->Pixels[(next_y) * PDest->W + next_x][c];
 
                 f = (A + 2 * B + C) - (F + 2 * G + H);
                 g = (A + 2 * D + F) - (C + 2 * E + H);
